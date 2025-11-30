@@ -4,7 +4,7 @@ Quick guide to all documentation files.
 
 ## 🚀 Getting Started (Read These First)
 
-1. **[README.md](README.md)** - Main overview and quick start
+1. **[README.md](../README.md)** - Main overview and quick start
 2. **[INSTALL.md](INSTALL.md)** - Complete installation guide
 3. **[NEXT_STEPS.md](NEXT_STEPS.md)** - Your first steps after installation
 4. **[QUICKSTART.md](QUICKSTART.md)** - Quick reference and examples
@@ -25,10 +25,10 @@ Quick guide to all documentation files.
 ```
 
 ### For Reference
-- **[CHANGELOG.md](CHANGELOG.md)** - Version history and changes
-- **[LICENSE](LICENSE)** - MIT License
-- **config/settings.yaml** - Configuration options
-- **memory-bank/** - Technical documentation (for developers)
+- **[CHANGELOG.md](../CHANGELOG.md)** - Version history and changes
+- **[LICENSE](../LICENSE)** - MIT License
+- **../config/settings.yaml** - Configuration options
+- **../memory-bank/** - Technical documentation (for developers)
 
 ## 📖 What Each File Contains
 
@@ -87,12 +87,12 @@ Quick guide to all documentation files.
 
 ### Path 1: Complete Beginner
 ```
-README.md → INSTALL.md → test_installation.sh → NEXT_STEPS.md
+README.md → docs/INSTALL.md → test_installation.sh → docs/NEXT_STEPS.md
 ```
 
 ### Path 2: Quick Start (Already Have Ollama)
 ```
-INSTALL.md (Step 4 only) → QUICKSTART.md
+docs/INSTALL.md (Step 4 only) → docs/QUICKSTART.md
 ```
 
 ### Path 3: Just Want Commands
@@ -102,17 +102,17 @@ README.md (Commands Reference section)
 
 ### Path 4: Setting Up Skills Inventory
 ```
-SKILLS_FEATURE.md → config/skills_inventory.yaml → resume-skills CLI
+docs/SKILLS_FEATURE.md → config/skills_inventory.yaml → resume-skills CLI
 ```
 
 ### Path 5: Configuring Resume Paths
 ```
-resume-builder setup → CONFIGURATION.md → resume-builder config
+resume-builder setup → docs/CONFIGURATION.md → resume-builder config
 ```
 
 ## 🔧 Developer Documentation
 
-Located in `memory-bank/`:
+Located in `../memory-bank/`:
 - **projectbrief.md** - Project goals and requirements
 - **activeContext.md** - Current implementation status
 - **techContext.md** - Technical architecture
@@ -127,9 +127,9 @@ Located in `memory-bank/`:
 - [Troubleshooting](INSTALL.md#troubleshooting)
 
 **Usage:**
-- [Complete Workflow](README.md#complete-workflow-recommended)
-- [Individual Commands](README.md#individual-commands)
-- [Match Scores](README.md#understanding-match-scores)
+- [Complete Workflow](../README.md#complete-workflow-recommended)
+- [Individual Commands](../README.md#individual-commands)
+- [Match Scores](../README.md#understanding-match-scores)
 
 **Help:**
 ```bash
@@ -152,5 +152,5 @@ Keep documentation:
 
 ---
 
-**Start here:** [README.md](README.md) → [INSTALL.md](INSTALL.md) → [NEXT_STEPS.md](NEXT_STEPS.md)
+**Start here:** [README.md](../README.md) → [INSTALL.md](INSTALL.md) → [NEXT_STEPS.md](NEXT_STEPS.md)
 

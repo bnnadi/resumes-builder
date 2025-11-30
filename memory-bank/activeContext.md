@@ -83,7 +83,7 @@ Created AI prompts in `resume_ai/prompts/`:
 - [x] README updated with AI features
 - [x] INSTALL_AI.md created
 - [x] Project brief updated
-- [ ] Update QUICKSTART.md with workflow examples
+- [ ] Update docs/QUICKSTART.md with workflow examples
 - [ ] Update CHANGELOG.md
 
 ## Technical Decisions

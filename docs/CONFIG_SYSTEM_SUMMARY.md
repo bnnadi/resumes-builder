@@ -209,7 +209,7 @@ Possible additions:
 
 Complete documentation available:
 - **[CONFIGURATION.md](CONFIGURATION.md)** - Full configuration guide
-- **[README.md](README.md)** - Quick start and overview
+- **[README.md](../README.md)** - Quick start and overview
 - **[QUICKSTART.md](QUICKSTART.md)** - Common commands
 - **[DOCS.md](DOCS.md)** - Documentation index
 

@@ -1,11 +1,13 @@
 # Include data files in package distribution
 
 include README.md
-include QUICKSTART.md
 include CHANGELOG.md
 include LICENSE
 include requirements.txt
 include requirements-dev.txt
+
+# Include documentation
+recursive-include docs *.md
 
 # Include templates and configuration
 recursive-include src/resume_export/templates *.yaml *.docx

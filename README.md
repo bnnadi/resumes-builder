@@ -63,7 +63,7 @@ resume-builder setup
 #  - Your base/master resume location
 ```
 
-See [INSTALL.md](INSTALL.md) for detailed setup and troubleshooting.
+See [docs/INSTALL.md](docs/INSTALL.md) for detailed setup and troubleshooting.
 
 ## Usage
 
@@ -266,13 +266,14 @@ ollama pull llama3.1
 resume-builder workflow job.txt --model llama3.1:8b
 ```
 
-See [INSTALL.md](INSTALL.md) for complete troubleshooting guide.
+See [docs/INSTALL.md](docs/INSTALL.md) for complete troubleshooting guide.
 
 ## Documentation
 
-- **[QUICKSTART.md](QUICKSTART.md)** - Quick start guide with examples
-- **[INSTALL.md](INSTALL.md)** - Detailed installation and setup
-- **[NEXT_STEPS.md](NEXT_STEPS.md)** - Getting started guide
+- **[docs/QUICKSTART.md](docs/QUICKSTART.md)** - Quick start guide with examples
+- **[docs/INSTALL.md](docs/INSTALL.md)** - Detailed installation and setup
+- **[docs/NEXT_STEPS.md](docs/NEXT_STEPS.md)** - Getting started guide
+- **[docs/DOCS.md](docs/DOCS.md)** - Complete documentation index
 - **[CHANGELOG.md](CHANGELOG.md)** - Version history
 
 ## Development
@@ -348,7 +349,7 @@ The skills are automatically integrated during resume customization - the AI wil
 
 **Conditional Skills**: Add notes for skills that should only appear in specific contexts (e.g., React Native only for mobile roles).
 
-**Documentation**: See [SKILLS_FEATURE.md](SKILLS_FEATURE.md) for complete guide including setup, usage, and conditional skills examples.
+**Documentation**: See [docs/SKILLS_FEATURE.md](docs/SKILLS_FEATURE.md) for complete guide including setup, usage, and conditional skills examples.
 
 ### Custom Company and Threshold
 ```bash
@@ -394,4 +395,4 @@ See [CHANGELOG.md](CHANGELOG.md) for full history.
 **Status:** ✅ Production Ready
 **Last Updated:** November 27, 2025
 
-For questions or issues, see [troubleshooting](#troubleshooting) or check [INSTALL.md](INSTALL.md).
+For questions or issues, see [troubleshooting](#troubleshooting) or check [docs/INSTALL.md](docs/INSTALL.md).

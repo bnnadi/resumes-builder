@@ -312,10 +312,10 @@ pip install -e .
 ## 📚 Documentation
 
 **Quick reference:**
-- `README_AI.md` - Complete feature overview
-- `INSTALL_AI.md` - Detailed installation guide
-- `IMPLEMENTATION_SUMMARY.md` - Technical details
-- `config/settings.yaml` - Configuration options
+- `../README.md` - Complete feature overview
+- `INSTALL.md` - Detailed installation guide
+- `../memory-bank/` - Technical details
+- `../config/settings.yaml` - Configuration options
 
 **Get help:**
 ```bash

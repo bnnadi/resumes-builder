@@ -407,5 +407,5 @@ A: No, only affects where new resumes are saved and found
 ---
 
 **Version**: Added in v0.4.0  
-**See also**: [README.md](README.md), [QUICKSTART.md](QUICKSTART.md)
+**See also**: [README.md](../README.md), [QUICKSTART.md](QUICKSTART.md)
 

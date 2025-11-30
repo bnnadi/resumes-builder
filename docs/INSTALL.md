@@ -512,4 +512,4 @@ After installation:
 
 ---
 
-**Installation complete!** Ready to use. See [README.md](README.md) for usage examples.
+**Installation complete!** Ready to use. See [README.md](../README.md) for usage examples.
