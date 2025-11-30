@@ -1,0 +1,203 @@
+# Your Complete Skills Inventory
+# This file contains all the skills you possess
+# The AI will suggest skills from this list based on job descriptions
+# Only add skills you genuinely have experience with
+
+programming_languages:
+  - Python
+  - JavaScript
+  - TypeScript
+  - Java
+  - SQL
+  - Bash
+  - Shell Scripting
+
+web_frameworks:
+  - React
+  - Node.js
+  - Express.js
+  - Next.js
+  - Django
+  - Flask
+  - FastAPI
+  - Vue.js
+  - Angular
+
+cloud_platforms:
+  - AWS
+  - AWS EC2
+  - AWS S3
+  - AWS Lambda
+  - AWS RDS
+  - AWS CloudFormation
+  - Google Cloud Platform
+  # - Azure
+  - Heroku
+  - Vercel
+
+containers_orchestration:
+  - Docker
+  - Kubernetes
+  - Docker Compose
+  - Container Orchestration
+
+databases:
+  - PostgreSQL
+  - MongoDB
+  - MySQL
+  - Redis
+  # - DynamoDB
+  - Elasticsearch
+  - SQLite
+
+ai_machine_learning:
+  - Machine Learning
+  - Large Language Models
+  - LLMs
+  - Natural Language Processing
+  - NLP
+  - TensorFlow
+  - PyTorch
+  # - scikit-learn
+  - Ollama
+  - OpenAI API
+  - RAG
+  - Retrieval-Augmented Generation
+  - Vector Databases
+  - Embeddings
+
+devops_ci_cd:
+  - CI/CD
+  - GitHub Actions
+  - Jenkins
+  - GitLab CI
+  # - Travis CI
+  - Continuous Integration
+  - Continuous Deployment
+
+version_control:
+  - Git
+  - GitHub
+  - GitLab
+  - Bitbucket
+  - Version Control
+
+testing:
+  - Unit Testing
+  - Integration Testing
+  - Test-Driven Development
+  - TDD
+  - Jest
+  - Pytest
+  - Mocha
+  - Cypress
+  - Selenium
+
+api_development:
+  - REST API
+  - RESTful APIs
+  - GraphQL
+  - API Design
+  - API Development
+  - Microservices
+  - WebSockets
+
+infrastructure_as_code:
+  # - Terraform
+  - CloudFormation
+  # - Ansible
+  - Infrastructure as Code
+  - IaC
+
+monitoring_logging:
+  - Monitoring
+  - Logging
+  # - Prometheus
+  # - Grafana
+  # - ELK Stack
+  # - DataDog
+  # - New Relic
+  - Sentry
+
+agile_methodologies:
+  - Agile
+  - Scrum
+  - Kanban
+  - Jira
+  - Sprint Planning
+  - Agile Development
+
+data_processing:
+  - Data Pipelines
+  - ETL
+  - Data Processing
+  # - Apache Spark
+  # - Pandas
+  - NumPy
+  - Data Analysis
+
+frontend_technologies:
+  - HTML
+  - CSS
+  - Responsive Design
+  - Tailwind CSS
+  - Bootstrap
+  - Material-UI
+  - Sass
+  - SCSS
+
+# MOBILE DEVELOPMENT
+# Note: Only add mobile skills if:
+# 1. Mobile development is explicitly mentioned in the job description, OR
+# 2. You have management experience overseeing mobile development teams
+# Otherwise, mark as gap even if you have the skill
+mobile_development:
+  - React Native  # Add only if mobile dev mentioned in JD or managing mobile teams
+  - Mobile Development
+  - iOS Development  # Add only if iOS specifically mentioned
+  - Android Development  # Add only if Android specifically mentioned
+  - Cross-Platform Development
+  - Mobile App Development
+
+backend_technologies:
+  - Serverless
+  - Microservices Architecture
+  - Event-Driven Architecture
+  - Message Queues
+  - RabbitMQ
+  # - Kafka
+
+security:
+  - Security Best Practices
+  - Authentication
+  - Authorization
+  - OAuth
+  - JWT
+  - SSL/TLS
+  - Security Auditing
+
+system_design:
+  - System Design
+  - System Architecture
+  - Distributed Systems
+  - Scalability
+  - High Availability
+  - Load Balancing
+
+soft_skills:
+  - Technical Leadership
+  - Team Collaboration
+  - Code Review
+  - Mentoring
+  - Documentation
+  - Problem Solving
+  - Cross-functional Collaboration
+  - Stakeholder Communication
+
+# Instructions for maintaining this file:
+# 1. Only add skills you genuinely have
+# 2. Keep skills updated as you learn new technologies
+# 3. Use consistent naming (check for duplicates)
+# 4. Group related skills in appropriate categories
+# 5. Add new categories as needed
+

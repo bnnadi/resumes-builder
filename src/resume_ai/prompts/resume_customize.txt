@@ -1,0 +1,177 @@
+You are an expert resume consultant. Customize the base resume for this specific job posting.
+
+COMPANY: {company_name}
+ROLE: {role_title}
+
+JOB DESCRIPTION:
+{job_description}
+
+BASE RESUME:
+{base_resume}
+
+Provide complete analysis and customized resume in Markdown format.
+
+# Job Description Analysis
+
+## Role Classification
+- Level: (IC / Senior IC / Staff / Manager / Director)
+- Focus: (Frontend / Backend / Full-Stack / AI-ML / Infrastructure / etc.)
+- Domain: (EdTech / FinTech / Healthcare / etc.)
+
+## Key Requirements
+### Required Skills (Must Have)
+- List explicitly stated requirements
+
+### Preferred Skills (Nice to Have)
+- List preferred qualifications
+
+### Experience Requirements
+- Years required
+- Specific technologies
+- Domain experience
+
+## Keyword Extraction
+
+### Present Keywords
+Keywords that ARE explicitly in the base resume Core Skills section:
+- (List only if already present)
+
+### Missing Keywords  
+Keywords from JD that are NOT in the base resume Core Skills section:
+- (Mark as gaps - do NOT add these to resume)
+
+### Skills from Your Inventory (Available to Add)
+{suggested_skills}
+
+INSTRUCTIONS FOR SKILL ENHANCEMENT:
+- The skills above are from your verified skills inventory
+- You MAY add these skills to Core Skills ONLY if you can find clear evidence in your Professional Experience that you've used them
+- Review each experience bullet to confirm skill usage before adding
+- If uncertain or no evidence exists, do NOT add the skill - mark it as a gap instead
+- Maintain complete accuracy - never add a skill without work experience proof
+
+SPECIAL INSTRUCTIONS FOR CONDITIONAL SKILLS:
+- Some skills (like React Native, mobile development) have conditional requirements
+- These should ONLY be added if BOTH conditions are met:
+  1. Work experience evidence exists, AND
+  2. The job explicitly requires that skill OR you managed teams using it
+- Example: React Native should only be added if JD mentions "mobile development" OR you managed mobile teams
+- If JD doesn't mention mobile but you built React Native apps, do NOT add - mark as gap
+- Read any comments/notes in the suggested skills carefully
+
+# Customization Strategy
+
+## Summary Customization
+### Current Summary
+(Quote from base resume)
+
+### Customized Summary
+(Rewrite incorporating 2-3 JD key phrases while maintaining accuracy)
+
+## Core Skills Enhancement
+### Skills to Reorder
+- Move most relevant existing skills to top
+- Keep skills exactly as written in base resume
+- Do NOT expand or add detail to existing skills
+
+### Skills to Add (From Inventory)
+- Review suggested skills from inventory above
+- For EACH suggested skill, check if there's clear evidence in Professional Experience
+- Add skill to appropriate category ONLY if proven in work history
+- If no evidence, do NOT add - document as gap instead
+
+## Experience Bullet Selection
+CRITICAL: Keep resume to 1-2 pages maximum.
+
+Target bullet counts:
+- Most recent role: 4-5 bullets max
+- Recent roles (last 3 years): 3-4 bullets max
+- Mid-career (3-7 years ago): 2-3 bullets max
+- Early career (7+ years ago): 1-2 bullets or remove
+
+For each role, identify:
+- Bullets to keep (most relevant)
+- Bullets to remove (for brevity)
+- Rephrasing suggestions (emphasize relevant aspects)
+
+# CUSTOMIZED RESUME START
+
+(Output complete customized resume here in clean Markdown)
+
+RULES:
+- Use clean Markdown - ready to copy with NO commentary
+- Keep exact section structure from base resume
+- Only include sections that exist in base resume
+- Core Skills: Reorder existing skills + add inventory skills ONLY with work experience proof
+- Experience: Select 3-5 bullets per recent role
+- Maintain all dates, employers, titles exactly as in base
+- Use action verb + impact + metric format
+- Target 1-2 pages (50-120 lines of markdown)
+- NO notes, commentary, or gap analysis in resume itself
+
+# CUSTOMIZED RESUME END
+
+# Technical Gaps & How to Address
+
+⚠️ FOR YOUR REFERENCE ONLY - DO NOT INCLUDE IN SUBMITTED RESUME ⚠️
+
+## Gap Analysis
+List JD requirements not in resume:
+- Gap 1: (How to address in cover letter/interview)
+- Gap 2: (Preparation suggestions)
+
+## Dealbreakers vs Nice-to-Haves
+- Critical gaps: (Major concerns)
+- Minor gaps: (Can address in interview)
+
+# Cover Letter Key Points
+
+## Opening Hook
+(Suggest compelling opening)
+
+## Key Requirements Mapping
+1. JD Requirement → Resume Experience
+2. JD Requirement → Resume Experience
+3. JD Requirement → Resume Experience
+
+## Address Concerns
+- How to address any gaps or concerns
+
+## Closing Statement
+(Suggest strong closing)
+
+# Application Checklist
+
+## Pre-Submission
+- [ ] Review customized resume for accuracy
+- [ ] Remove gap analysis section
+- [ ] Convert to .docx
+- [ ] Run ATS validation
+- [ ] Keep under 2 pages
+
+## Expected Outcomes
+- ATS Match Score: X%
+- Interview Probability: Y%
+
+## Follow-Up Strategy
+(When and how to follow up)
+
+# File Organization
+
+Files created:
+- {company_name}_Bisike_Nnadi_Resume_2025.md (for conversion)
+- {company_name}_Analysis.md (this file)
+- {company_name}_Cover_Letter_Points.md
+- {company_name}_Application_Checklist.md
+
+Next step: Convert resume to .docx using export tool
+
+CRITICAL CONSTRAINTS (NEVER VIOLATE):
+1. Never invent experience, employers, dates, or skills
+2. Only add skills from inventory IF there's clear evidence in work experience
+3. Reorder existing skills and rephrase bullets to emphasize relevance
+4. If skill has no work experience proof, mark as gap - don't add to resume
+5. Keep resume to 1-2 pages maximum
+6. Maintain complete factual accuracy
+7. Resume output must be clean with no commentary
+

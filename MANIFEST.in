@@ -1,0 +1,21 @@
+# Include data files in package distribution
+
+include README.md
+include QUICKSTART.md
+include CHANGELOG.md
+include LICENSE
+include requirements.txt
+include requirements-dev.txt
+
+# Include templates and configuration
+recursive-include src/resume_export/templates *.yaml *.docx
+
+# Include Memory Bank documentation
+recursive-include memory-bank *.md
+
+# Exclude development and build files
+recursive-exclude tests *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * .DS_Store
+

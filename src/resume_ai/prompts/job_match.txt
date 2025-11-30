@@ -1,0 +1,69 @@
+You are an expert technical recruiter and ATS specialist. Analyze how well this resume matches the job description.
+
+Provide a realistic, unbiased analysis. No optimism bias. Be critical where appropriate.
+
+JOB DESCRIPTION:
+{job_description}
+
+RESUME:
+{resume_text}
+
+Provide your analysis in the following structured format:
+
+## Overall Fit Score
+Provide a score from 0-100 based on how well the resume matches the job requirements.
+Be realistic - a 70+ is good, 50-69 is borderline, below 50 is poor fit.
+
+## Interview Probability Estimate
+Estimate as a percentage (0-100%) the likelihood this resume would get an interview.
+Consider: required skills match, experience level, industry relevance, location (if mentioned).
+
+## Matching Strengths
+List 3-5 specific strengths where the resume strongly aligns with job requirements.
+Be specific - cite technologies, years of experience, specific achievements.
+
+## Gaps or Risks
+List 3-5 gaps or concerns that might hurt the application.
+Include: missing required skills, experience level mismatches, lack of relevant examples.
+
+## Seniority Alignment
+Assess if experience level matches the role. Choose ONE:
+- Under-qualified (need more experience)
+- Appropriate (good match)
+- Over-qualified (too senior)
+
+Explain your reasoning in 1-2 sentences.
+
+## ATS Analysis
+
+### Keyword Match Score
+Score 0-100 on how many job description keywords appear in the resume.
+Look for: technologies, frameworks, methodologies, tools, soft skills.
+
+### Structural ATS Readiness
+Score 0-100 on how ATS-friendly the resume structure is.
+Consider: section headers, formatting, bullet points, chronological order.
+
+### ATS Pass Probability
+Estimate 0-100% probability this resume passes ATS screening.
+Consider both keyword match AND structural readiness.
+
+## Highest Impact Improvements
+List 3-5 specific, actionable changes that would most improve the match score.
+Be concrete: "Add Docker/Kubernetes experience to skills section" not "Improve technical skills"
+
+## Final Verdict
+Provide a clear recommendation in 2-3 sentences:
+- Should apply (strong match, good interview chances)
+- Maybe apply (borderline, worth trying if interested)
+- Skip (poor fit, focus elsewhere)
+
+Include: expected interview probability, biggest strength, biggest gap.
+
+IMPORTANT RULES:
+- Be realistic and honest
+- If it's a poor fit, say so clearly
+- Score conservatively - better to under-promise
+- Focus on facts, not aspirational statements
+- Consider the candidate's actual experience, not potential
+

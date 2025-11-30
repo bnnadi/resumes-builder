@@ -1,0 +1,119 @@
+# ATS-Approved Resume Formatting Styles
+
+# Font Configuration
+fonts:
+  body:
+    name: "Calibri"
+    size: 11
+    fallback: "Arial"  # If Calibri not available
+  
+  name:
+    name: "Calibri"
+    size: 16
+    bold: true
+    fallback: "Arial"
+  
+  section_header:
+    name: "Calibri"
+    size: 12
+    bold: true
+    fallback: "Arial"
+  
+  job_title:
+    name: "Calibri"
+    size: 11
+    bold: true
+    fallback: "Arial"
+  
+  company_name:
+    name: "Calibri"
+    size: 11
+    bold: false
+    fallback: "Arial"
+  
+  dates:
+    name: "Calibri"
+    size: 11
+    italic: true
+    fallback: "Arial"
+
+# Margin Configuration (in inches)
+margins:
+  top: 1.0
+  bottom: 1.0
+  left: 1.0
+  right: 1.0
+
+# Spacing Configuration (in points)
+spacing:
+  line: 1.0           # Single spacing
+  paragraph: 6        # 6pt between paragraphs
+  section: 12         # 12pt between major sections
+  before_header: 6    # Space before section headers
+  after_header: 3     # Space after section headers
+
+# Bullet Point Configuration
+bullets:
+  style: "simple_round"  # Use simple round bullets (•)
+  indent: 0.25          # 0.25" left indent
+  hanging: 0.25         # 0.25" hanging indent
+
+# ATS Compliance Rules
+ats_rules:
+  max_file_size_mb: 1.0
+  
+  allowed_fonts:
+    - "Calibri"
+    - "Arial"
+    - "Times New Roman"
+    - "Georgia"
+    - "Helvetica"
+  
+  forbidden_elements:
+    - tables
+    - text_boxes
+    - images
+    - headers
+    - footers
+    - columns
+    - shapes
+    - charts
+  
+  forbidden_bullet_characters:
+    - "⚡"
+    - "★"
+    - "●"
+    - "◆"
+    - "➤"
+    - "✓"
+    - "✔"
+  
+  recommended_page_length:
+    min: 1
+    max: 2
+  
+  max_line_length: 100  # Characters per line (for readability)
+
+# Section Headers (standard ATS-recognized sections)
+standard_sections:
+  - "Summary"
+  - "Professional Summary"
+  - "Core Skills"
+  - "Skills"
+  - "Technical Skills"
+  - "Experience"
+  - "Professional Experience"
+  - "Work Experience"
+  - "Education"
+  - "Certifications"
+  - "Awards"
+
+# Contact Information Format
+contact_format:
+  location: "City, State"
+  email: "email@example.com"
+  phone: "(123) 456-7890"
+  linkedin: "linkedin.com/in/profile"
+  github: "github.com/username"
+  separator: " | "
+

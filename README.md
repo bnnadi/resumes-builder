@@ -1,334 +1,397 @@
-# ATS Resume Export System
+# AI-Powered Resume Builder
 
-Convert markdown resumes to ATS-optimized .docx files with a single command.
+Complete job application workflow with AI analysis, customization, and ATS-optimized export.
 
 ## Overview
 
-This tool automates the conversion of markdown-formatted resumes into ATS (Applicant Tracking System) compliant .docx files. It ensures proper formatting, validates ATS compliance, and creates complete application packages.
+Transform your job application process with AI-powered resume analysis and customization. This tool scores job fit, customizes resumes for specific roles, and exports to ATS-compliant .docx format - all in one command.
 
-## Features
+**Features:**
+- 🤖 **AI Job Matching** - Score resume fit (0-100) and predict interview probability
+- 🎯 **Smart Threshold** - Auto-stops on poor matches (< 70% score) to save time
+- ✍️ **AI Customization** - Tailor resumes to specific jobs with keyword optimization
+- 🎨 **Skills Inventory** - Maintain all your skills and intelligently add matching ones (NEW!)
+- ✅ **ATS Export** - Generate properly formatted .docx files (Calibri 11pt, 1" margins)
+- 📦 **Complete Package** - Resume, analysis, cover letter points, and checklist
+- 🔒 **Private & Offline** - Uses local Ollama (no cloud, no API costs)
 
-- ✅ **Markdown to DOCX**: Convert markdown resumes to properly formatted .docx files
-- ✅ **ATS Compliance**: Automatic validation of ATS-friendly formatting
-- ✅ **Multi-Format Export**: Generate .docx, .pdf, .html, and .txt versions
-- ✅ **Package Builder**: Create complete application packages with supporting documents
-- ✅ **Fast**: Export complete packages in under 10 seconds
-- ✅ **CLI Interface**: Simple command-line interface for automation
-
-## Installation
-
-### Quick Install (Recommended)
-
-**Option 1: Automated Installation Script**
-```bash
-cd /Users/bisikennadi/Projects/resumes-builder
-./install.sh
-```
-
-**Option 2: Using Make**
-```bash
-make install
-```
-
-**Option 3: Manual Installation**
-```bash
-# Create virtual environment
-python3.12 -m venv venv
-source venv/bin/activate
-
-# Install dependencies and package
-pip install -r requirements.txt
-pip install -e .
-
-# Verify installation
-export-resume --version
-```
-
-See `INSTALL.md` for detailed installation instructions and troubleshooting.
-
-### Prerequisites
-
-- Python 3.12 or higher
-- pip (included with Python)
-- ~100MB disk space
+**Time Savings:** 28 minutes → 5 minutes per application (82% reduction)
 
 ## Quick Start
 
-### Basic Usage
+### Prerequisites
 
-Convert a markdown resume to .docx:
+1. **Install Ollama:**
+   ```bash
+   brew install ollama  # macOS
+   ```
 
-```bash
-export-resume path/to/resume.md
-```
+2. **Pull AI model:**
+   ```bash
+   ollama pull llama3.1
+   ```
 
-### With Validation
+3. **Start Ollama:**
+   ```bash
+   ollama serve &
+   ```
 
-Export and validate ATS compliance:
-
-```bash
-export-resume resume.md --validate
-```
-
-### Create Complete Package
-
-Generate .docx, .pdf, and supporting documents:
-
-```bash
-export-resume resume.md --package
-```
-
-### Multi-Format Export
-
-Export to multiple formats:
+### Installation
 
 ```bash
-export-resume resume.md --formats docx pdf html
-```
-
-## ATS Formatting Rules
-
-The tool ensures your resume follows ATS best practices:
-
-- **Font**: Calibri 11pt (or Arial as fallback)
-- **Margins**: 1 inch on all sides
-- **Spacing**: Single spacing with proper section separation
-- **Bullets**: Simple round bullets (no fancy symbols)
-- **No**: Tables, images, text boxes, headers, or footers
-- **File Size**: Under 1MB
-
-## Command-Line Options
-
-```bash
-export-resume [OPTIONS] INPUT_FILE
-
-Options:
-  -o, --output DIR          Output directory (default: same as input)
-  -f, --formats FORMATS     Export formats: docx, pdf, html, txt (default: docx)
-  --validate                Validate ATS compliance after export
-  --package                 Create complete application package
-  --template FILE           Custom .docx template
-  --preview                 Preview formatting without exporting
-  --validate-only           Only validate existing .docx file
-  --batch DIR               Batch process all resumes in directory
-  -v, --verbose             Verbose output
-  --version                 Show version
-  -h, --help                Show help message
-```
-
-## Examples
-
-### Example 1: Simple Export
-
-```bash
-export-resume Hillpointe_Resume.md
-```
-
-Output:
-- `Hillpointe_Resume.docx`
-
-### Example 2: Complete Application Package
-
-```bash
-export-resume Hillpointe_Resume.md --package --validate
-```
-
-Output:
-- `Hillpointe_Resume.docx` ✅ [READY TO SUBMIT]
-- `Hillpointe_Resume.pdf` ✅ [READY TO SUBMIT]
-- `00_START_HERE.md` [Quick reference]
-- `README.md` [Package overview]
-- All existing analysis and checklist files preserved
-
-### Example 3: Batch Processing
-
-```bash
-export-resume --batch applications/ --validate
-```
-
-Exports all markdown resumes in the directory.
-
-### Example 4: Validate Existing File
-
-```bash
-export-resume --validate-only existing_resume.docx
-```
-
-## Markdown Resume Format
-
-Your markdown resume should follow this structure:
-
-```markdown
-# Your Full Name
-
-City, State | email@example.com | (123) 456-7890  
-LinkedIn: linkedin.com/in/profile | GitHub: github.com/username
-
-## Summary
-
-Brief professional summary highlighting key achievements and expertise.
-
-## Core Skills
-
-**Leadership**: Team building, Strategy, Agile methodologies  
-**Technical**: Python, React, AWS, Docker, Kubernetes
-
-## Experience
-
-### Job Title, Company Name, Location
-*Month Year - Month Year*
-
-- Achievement with quantifiable results
-- Led initiative that improved X by Y%
-- Managed team of Z engineers
-
-### Previous Job Title, Company Name, Location
-*Month Year - Month Year*
-
-- More achievements
-- More quantifiable results
-
-## Education
-
-**Degree Name** - University Name (Year)  
-Relevant coursework, honors, or activities
-```
-
-## Integration with Existing Workflow
-
-This tool is designed to integrate seamlessly with existing resume customization workflows:
-
-```bash
-# 1. Customize resume (existing workflow)
-resume-customize --company "Company Name"
-
-# 2. Export to .docx (new tool)
-export-resume applications/Company/Company_Resume.md --package
-
-# 3. Submit application
-# → Use Company_Resume.docx from the package
-```
-
-## Development
-
-### Setup Development Environment
-
-**Automated Setup**:
-```bash
-make install
-```
-
-**Manual Setup**:
-```bash
-# Clone or navigate to repository
 cd /Users/bisikennadi/Projects/resumes-builder
-
-# Create virtual environment
 python3.12 -m venv venv
 source venv/bin/activate
-
-# Install dependencies
 pip install -r requirements.txt
-pip install -r requirements-dev.txt
-
-# Install in development mode
 pip install -e .
 ```
 
-### Development Commands
-
+**Verify:**
 ```bash
-make clean         # Clean build artifacts
-make test          # Run tests
-make lint          # Run linters
-make format        # Format code
-make demo          # Run demo with sample resume
+resume-builder --version
+# Output: resume-builder 0.3.0
 ```
 
-### Run Tests
-
+**First-Time Setup:**
 ```bash
-pytest
+# Interactive setup wizard
+resume-builder setup
+
+# This will configure:
+#  - Where your resumes are stored
+#  - Where to save customized resumes
+#  - Your base/master resume location
 ```
 
-### Run Tests with Coverage
+See [INSTALL.md](INSTALL.md) for detailed setup and troubleshooting.
+
+## Usage
+
+### Complete Workflow (Recommended)
 
 ```bash
-pytest --cov=resume_export --cov-report=html
+# Analyze job, customize resume, export to .docx
+resume-builder workflow job-posting.txt
 ```
 
-### Format Code
+**What happens:**
+1. AI analyzes job match (~60 seconds)
+2. Threshold check - stops if score < 70%
+3. AI customizes resume (~3 minutes)
+4. Exports to ATS-compliant .docx (~3 seconds)
 
-```bash
-black resume_export/
-isort resume_export/
+**Output:**
+```
+applications/Company/
+├── Company_Resume.docx           ⭐ SUBMIT THIS
+├── Company_Analysis.md
+├── Company_Cover_Letter_Points.md
+└── Company_Application_Checklist.md
 ```
 
-### Type Check
+### Individual Commands
 
 ```bash
-mypy resume_export/
+# Analyze job match only
+resume-builder job-match job-posting.txt
+
+# Customize resume only
+resume-builder customize job-posting.txt --company Google
+
+# Export only (traditional, no AI)
+resume-builder export resume.md --validate --package
+
+# Evaluate existing resumes
+resume-builder eval
+```
+
+### Advanced Options
+
+```bash
+# Custom threshold
+resume-builder workflow job.txt --min-score 80
+
+# Force through regardless of score
+resume-builder workflow job.txt --force
+
+# Use different AI model
+resume-builder workflow job.txt --model mistral
+```
+
+## Understanding Match Scores
+
+| Score | Meaning | Action |
+|-------|---------|--------|
+| 85-100 | Excellent match | Definitely apply |
+| 70-84 | Good match | Strong candidate |
+| 60-69 | Borderline | Worth trying for reach companies |
+| < 60 | Poor match | Focus elsewhere |
+
+**Default 70% threshold** prevents wasting time on poor-fit jobs.
+
+## Features in Detail
+
+### AI Job Matching
+- Analyzes resume against job requirements
+- Scores technical skills, experience level, and seniority alignment
+- Calculates ATS keyword match and pass probability
+- Predicts interview likelihood based on fit
+
+### Smart Threshold Gate
+- Auto-stops on poor matches (< 70% by default)
+- Asks on borderline matches (60-69%)
+- Saves 20+ minutes per rejected application
+- Configurable threshold in settings
+
+### AI Customization
+- Reorders sections for relevance
+- Emphasizes matching skills and experience
+- Optimizes keywords for ATS systems
+- **Never fabricates** - only reorders existing content
+- Keeps resume to 1-2 pages
+
+### ATS-Compliant Export
+- Proper fonts: Calibri/Arial 11pt
+- Standard margins: 1 inch all sides
+- No tables, images, or complex formatting
+- Simple bullets and sections
+- File size under 1MB
+- Automatic validation
+
+## Configuration
+
+### Interactive Setup (Recommended)
+
+```bash
+# Run the setup wizard
+resume-builder setup
+
+# View current configuration
+resume-builder config list
+
+# Change specific settings
+resume-builder config set resume-path ~/my-resumes
+resume-builder config set base-resume ~/my-resumes/master.md
+resume-builder config set output-dir ~/my-resumes/applications
+resume-builder config set model mistral
+
+# Validate paths
+resume-builder config validate
+```
+
+### Manual Configuration
+
+Edit `~/.config/resume-builder/config.yaml` or `config/settings.yaml`:
+
+```yaml
+# Resume paths
+resume_paths:
+  primary: "~/Documents/resumes"  # Where you keep resumes
+  applications: "~/Documents/resumes/applications"  # Customized resumes
+  base_resume: "~/Documents/resumes/master.md"  # Your master resume
+
+# Ollama configuration
+ollama:
+  model: "llama3.1"  # or "mistral", "mixtral"
+  temperature: 0.7
+
+# Threshold settings
+thresholds:
+  minimum_overall: 70  # Match score minimum
+  ask_on_borderline: true
+
+# Output directory
+output:
+  base_dir: "~/Documents/resumes/applications"
+```
+
+## Commands Reference
+
+### Main Commands
+| Command | Description |
+|---------|-------------|
+| `workflow` | Complete workflow (match → customize → export) |
+| `job-match` | Analyze job fit and score |
+| `customize` | Customize resume for job |
+| `eval` | Evaluate and compare resumes |
+| `export` | Export to .docx (no AI) |
+| `setup` | Interactive configuration wizard |
+| `config` | Manage settings (list/set/get/validate) |
+
+### Legacy Commands
+| Command | Description |
+|---------|-------------|
+| `export-resume` | Traditional export (backward compatible) |
+
+### Common Options
+- `--min-score N` - Set minimum match score (default: 70)
+- `--force` - Skip threshold check
+- `--model NAME` - Choose Ollama model
+- `--quiet` - Minimal output
+- `--help` - Show help
+
+## Performance
+
+**Typical Times:**
+- Job match analysis: 30-60 seconds
+- Resume customization: 2-4 minutes
+- Export to .docx: 2-3 seconds
+- **Total workflow: 3-5 minutes**
+
+**System Requirements:**
+- Python 3.12+
+- RAM: 8GB recommended (4GB for Ollama)
+- Disk: ~5GB (4GB model + code)
+- Ollama with llama3.1 model
+
+## Troubleshooting
+
+### "Cannot connect to Ollama"
+```bash
+# Check if running
+ps aux | grep ollama
+
+# Start Ollama
+ollama serve &
+```
+
+### "Model not found"
+```bash
+ollama pull llama3.1
+```
+
+### Slow generation
+```bash
+# Use smaller/faster model
+resume-builder workflow job.txt --model llama3.1:8b
+```
+
+See [INSTALL.md](INSTALL.md) for complete troubleshooting guide.
+
+## Documentation
+
+- **[QUICKSTART.md](QUICKSTART.md)** - Quick start guide with examples
+- **[INSTALL.md](INSTALL.md)** - Detailed installation and setup
+- **[NEXT_STEPS.md](NEXT_STEPS.md)** - Getting started guide
+- **[CHANGELOG.md](CHANGELOG.md)** - Version history
+
+## Development
+
+```bash
+# Setup development environment
+make install
+
+# Run tests
+make test
+
+# Format code
+make format
+
+# Lint code
+make lint
 ```
 
 ## Project Structure
 
 ```
 resumes-builder/
-├── resume_export/              # Main package
-│   ├── parser.py              # Markdown parsing
-│   ├── docx_builder.py        # DOCX generation
-│   ├── exporter.py            # Main exporter
-│   ├── exporters/             # Format-specific exporters
-│   ├── validators/            # ATS validation
-│   └── templates/             # Style templates
-├── export_resume.py           # CLI entry point
-├── tests/                     # Test suite
-├── memory-bank/               # Project documentation
-├── requirements.txt           # Dependencies
-├── setup.py                   # Package setup
-└── README.md                  # This file
+├── src/
+│   ├── resume_ai/          # AI-powered features
+│   │   ├── ollama_client.py
+│   │   ├── job_match.py
+│   │   ├── resume_customize.py
+│   │   ├── threshold_gate.py
+│   │   └── prompts/
+│   ├── resume_export/      # Traditional export
+│   │   ├── parser.py
+│   │   ├── docx_builder.py
+│   │   └── exporters/
+│   └── resume_builder_cli.py
+├── config/
+│   └── settings.yaml
+└── memory-bank/            # Project documentation
 ```
 
-## Troubleshooting
+## Examples
 
-### Font Not Found
+### Basic Workflow
+```bash
+resume-builder workflow google-swe.txt
+```
 
-If Calibri is not installed:
-- Tool automatically falls back to Arial
-- Warning will be displayed
-- Both fonts are ATS-friendly
+### Batch Processing
+```bash
+for job in jobs/*.txt; do
+    resume-builder workflow "$job" --min-score 70
+done
+```
 
-### PDF Generation Fails
+### Skills Inventory Management (NEW!)
 
-PDF generation requires LibreOffice or python-docx2pdf:
-- Install LibreOffice for best results
-- Or: `pip install python-docx2pdf`
-- Tool will skip PDF if neither available
+Maintain a central database of all your skills and let the AI intelligently suggest relevant ones:
 
-### Validation Warnings
+```bash
+# List all your skills
+resume-skills list
 
-If ATS validation shows warnings:
-- Review the specific issues reported
-- Most warnings are suggestions, not critical
-- Critical issues will prevent export
+# Check which skills match a job
+resume-skills match job_posting.txt
 
-## Support
+# Add new skills
+resume-skills add programming_languages "Rust"
 
-For issues or questions:
-1. Check the Memory Bank documentation in `memory-bank/`
-2. Review existing test cases in `tests/`
-3. Check project documentation
+# Find a specific skill
+resume-skills find "Docker"
+```
+
+The skills are automatically integrated during resume customization - the AI will suggest relevant skills from your inventory and add them ONLY if there's evidence in your work experience.
+
+**Conditional Skills**: Add notes for skills that should only appear in specific contexts (e.g., React Native only for mobile roles).
+
+**Documentation**: See [SKILLS_FEATURE.md](SKILLS_FEATURE.md) for complete guide including setup, usage, and conditional skills examples.
+
+### Custom Company and Threshold
+```bash
+resume-builder workflow job.txt \
+    --company "Google" \
+    --min-score 75 \
+    --base-resume master-resume.md
+```
+
+## Why This Tool?
+
+**Before (Manual):**
+- 28 minutes per application
+- Subjective job fit assessment
+- Manual keyword optimization
+- Tedious formatting
+
+**After (AI-Powered):**
+- 5 minutes per application
+- Objective match scoring
+- Automatic customization
+- ATS-compliant export
+
+**Result:** Focus on high-quality applications, not busy work.
 
 ## License
 
-MIT License - See LICENSE file for details
+MIT License - See [LICENSE](LICENSE)
 
 ## Version
 
-Current Version: 0.1.0 (Alpha)
+**Current Version:** 0.2.0
+- Added AI-powered job matching
+- Added smart threshold gating (70% default)
+- Added AI resume customization
+- Added resume evaluation
+- Added complete workflow orchestration
+
+See [CHANGELOG.md](CHANGELOG.md) for full history.
 
 ---
 
-**Built for**: Job seekers who want ATS-compliant resumes without manual formatting  
-**Optimized for**: Speed, reliability, and seamless workflow integration
+**Status:** ✅ Production Ready
+**Last Updated:** November 27, 2025
 
+For questions or issues, see [troubleshooting](#troubleshooting) or check [INSTALL.md](INSTALL.md).

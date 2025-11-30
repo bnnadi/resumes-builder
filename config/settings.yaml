@@ -1,0 +1,47 @@
+# Resume Builder Configuration
+#
+# NOTE: This file contains project-wide defaults.
+# 
+# For personal configuration:
+#   1. Run: resume-builder setup (recommended)
+#   2. Or edit: ~/.config/resume-builder/config.yaml
+#
+# This file is used as a fallback if no user config exists.
+# Changes here affect all users of this installation.
+
+# Ollama AI Configuration
+ollama:
+  base_url: "http://localhost:11434"
+  model: "llama3.1"  # Options: llama3.1, mistral, mixtral
+  temperature: 0.7
+  timeout: 180  # seconds
+
+# Threshold Configuration
+thresholds:
+  minimum_overall: 70  # Minimum match score to continue
+  borderline_min: 60   # Below this is poor match
+  borderline_max: 69   # Between this and minimum is borderline
+  auto_stop_below: true
+  ask_on_borderline: true
+
+# Resume Search Paths
+resume_paths:
+  primary: "~/Research/resumes"
+  applications: "~/Research/resumes/applications"
+  fallback: "~/Documents"
+
+# Export Configuration
+export:
+  auto_validate: true
+  create_package: true
+  default_format: "docx"
+
+# Output Configuration
+output:
+  base_dir: "~/Research/resumes/applications"
+  create_subdirs: true
+  preserve_existing: true
+
+# Verbose Output
+verbose: true
+

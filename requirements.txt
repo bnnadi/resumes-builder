@@ -1,0 +1,30 @@
+# Core Dependencies for ATS Resume Export System
+
+# DOCX generation and manipulation
+python-docx>=1.1.0
+
+# Markdown parsing
+markdown>=3.5.0
+
+# Configuration files
+pyyaml>=6.0.0
+
+# Template rendering
+jinja2>=3.1.0
+
+# PDF generation (optional - graceful degradation if not available)
+pypdf>=3.17.0
+
+# Additional utilities
+typing-extensions>=4.8.0
+
+# AI-Powered Features (Ollama integration)
+ollama>=0.1.0
+requests>=2.31.0
+
+# Rich CLI output
+rich>=13.0.0
+
+# CLI framework
+click>=8.0.0
+

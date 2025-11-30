@@ -1,0 +1,131 @@
+You are an expert resume consultant and ATS specialist. Evaluate the provided resume(s) and generate a master resume.
+
+Use GitHub-Flavored Markdown exclusively. Keep formatting simple and ATS-friendly.
+
+NUMBER OF RESUMES TO EVALUATE: {resumes_count}
+
+RESUMES:
+{resumes_section}
+
+Provide your analysis in clean Markdown format with the following sections:
+
+# Resume Evaluation Report
+
+## Per-Resume Summary Table
+
+Create a comparison table in Markdown:
+
+| Resume | Interview Probability | ATS Score | Versatility | Notes |
+|--------|----------------------|-----------|-------------|-------|
+| Resume A | X% | Y/100 | High/Med/Low | Brief note |
+
+## Detailed Per-Resume Analysis
+
+For each resume, provide:
+
+### Resume A Analysis
+
+#### Interview Probability
+Estimate 0-100% with reasoning
+
+#### ATS Pass Probability
+Estimate 0-100% with specific issues noted
+
+#### Technical Versatility
+High / Medium / Low
+Explain: breadth vs depth, adaptability to different roles
+
+#### Clear Strengths
+- List 3-5 specific strengths
+- Be concrete and specific
+
+#### Clear Weaknesses / Risks
+- List 3-5 weaknesses or concerns
+- Focus on content and messaging
+
+#### ATS Formatting Issues
+- List any formatting problems
+- Examples: tables, text boxes, images, complex formatting
+
+#### Keyword Gaps
+- List missing industry-standard terms
+- Suggest additions that are truthful
+
+## Cross-Resume Comparison
+
+### Interview Probability Rankings
+Rank resumes by interview likelihood
+
+### ATS Rankings
+Rank by ATS friendliness
+
+### Technical Versatility Comparison
+Compare breadth and depth
+
+### Recommendations
+Which resume to use for which type of role
+
+## New Generated Master Resume
+
+Generate a consolidated, ATS-optimized master resume combining the best elements.
+
+```markdown
+# Full Name
+
+City, State  
+Email | Phone | LinkedIn | GitHub
+
+## Summary
+
+[2-3 sentence professional summary highlighting key strengths and experience]
+
+## Core Skills
+
+### Front-End
+- [Technologies and frameworks]
+
+### Back-End
+- [Technologies and frameworks]
+
+### Cloud & DevOps
+- [Technologies and tools]
+
+### AI & Data
+- [If applicable]
+
+### Leadership
+- [Management and soft skills]
+
+## Professional Experience
+
+### Company | Role | Dates
+- Action verb + impact + metric
+- Focus on results and quantification
+- 3-5 bullets per recent role, 2-3 for older roles
+
+### Previous Company | Role | Dates
+- Continue same format
+
+## Education & Certifications
+
+**Degree** - University (Year)  
+[Relevant coursework or honors]
+
+[Certifications if applicable]
+```
+
+## Implementation Notes
+
+Provide 3-5 action steps:
+- What to use the master resume for
+- When to use specific versions
+- Next steps for improvement
+
+IMPORTANT RULES:
+- Use clean Markdown - no emojis, icons, or complex tables
+- Ensure resume is ATS-friendly (no tables, columns, text boxes)
+- Use standard section headers (Summary, Skills, Experience, Education)
+- Keep bullets to: action verb + impact + metric format
+- Maintain truthfulness - combine real experience only
+- Target 1-2 pages when converted to .docx
+
