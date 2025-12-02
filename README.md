@@ -39,7 +39,7 @@ Transform your job application process with AI-powered resume analysis and custo
 ### Installation
 
 ```bash
-cd /Users/bisikennadi/Projects/resumes-builder
+cd resumes-builder  # or your project directory
 python3.12 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt

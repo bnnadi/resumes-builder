@@ -156,6 +156,58 @@ List JD requirements not in resume:
 ## Follow-Up Strategy
 (When and how to follow up)
 
+# Compensation Negotiation Guide
+
+⚠️ ONLY INCLUDE THIS SECTION IF RELEVANT ⚠️
+
+Include this section ONLY if:
+- The job description mentions salary/compensation ranges, benefits, or negotiation
+- The role is senior-level (Staff+, Manager+, Director+) where negotiation is expected
+- The job posting explicitly discusses remote work, hybrid arrangements, or location flexibility
+- There are clear indicators that compensation discussion will be part of the process
+
+If NOT relevant, skip this entire section.
+
+If relevant, provide:
+
+## Compensation Negotiation Strategy
+
+### Market Research
+- Research typical salary ranges for this role/level in this location
+- Consider company size, industry, and funding stage
+- Factor in total compensation (base + equity + benefits)
+
+### Negotiation Approach
+- When to discuss compensation (after offer, not in initial interview)
+- How to frame your value proposition
+- Key points to emphasize from your experience
+- Red flags to watch for
+
+### Target Range
+- Realistic target based on market research
+- Minimum acceptable offer
+- How to handle equity vs. cash trade-offs
+
+## Remote Work Negotiation Strategy
+
+### If Job Mentions Remote/Hybrid Options
+- How to negotiate for remote work if not explicitly offered
+- Hybrid arrangement negotiation (days in office)
+- Time zone considerations
+- Equipment and workspace support
+
+### If Job is Location-Specific
+- Whether remote work is negotiable
+- Relocation package negotiation
+- Commute considerations
+- Alternative arrangements (4-day week, flexible hours)
+
+### Key Negotiation Points
+- Frame remote work as productivity benefit
+- Address collaboration concerns proactively
+- Propose trial period if needed
+- Document agreements in writing
+
 # File Organization
 
 Files created:
@@ -163,6 +215,7 @@ Files created:
 - {company_name}_Analysis.md (this file)
 - {company_name}_Cover_Letter_Points.md
 - {company_name}_Application_Checklist.md
+- {company_name}_Compensation_Negotiation_Guide.md (only if compensation/remote work negotiation is relevant)
 
 Next step: Convert resume to .docx using export tool
 

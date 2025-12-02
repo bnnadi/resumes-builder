@@ -103,6 +103,8 @@ class PackageBuilder:
                     content += f"- ✍️  **{file.name}** - Cover letter key points\n"
                 elif "Checklist" in file.name:
                     content += f"- ☑️  **{file.name}** - Application checklist\n"
+                elif "Compensation" in file.name or "Negotiation" in file.name:
+                    content += f"- 💰 **{file.name}** - Compensation & negotiation strategy\n"
                 elif "Gaps" in file.name:
                     content += f"- ⚠️  **{file.name}** - Technical gaps & preparation\n"
                 else:
@@ -170,6 +172,7 @@ These files help you prepare for the application and interview:
 - **Cover Letter Points** - Key points to include in cover letter
 - **Application Checklist** - Steps to complete before submitting
 - **Technical Gaps** - Areas to prepare for interviews
+- **Compensation Negotiation Guide** - Strategy for salary and remote work negotiation (if relevant)
 
 ## 🎯 How to Use This Package
 

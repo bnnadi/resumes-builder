@@ -24,6 +24,7 @@ class CustomizationResult:
     application_checklist_md: str
     output_directory: Path
     files_created: list[Path]
+    compensation_negotiation_guide_md: Optional[str] = None
 
 
 class ResumeCustomizer:
@@ -378,11 +379,35 @@ class ResumeCustomizer:
         checklist_file = output_dir / f"{company_name}_Application_Checklist.md"
         checklist_file.write_text(f"# Application Checklist - {company_name}\n\n{checklist}")
         
+        # Extract compensation negotiation guide (if present and relevant)
+        # Match the section header and capture until next top-level heading (# ) or end of string
+        compensation_match = re.search(
+            r'# Compensation Negotiation Guide\s*\n(.*?)(?=\n# [^#]|$)',
+            response,
+            re.DOTALL | re.IGNORECASE
+        )
+        compensation_guide = None
+        compensation_file = None
+        
+        if compensation_match:
+            compensation_content = compensation_match.group(1).strip()
+            # Only create file if content is substantial (not just placeholder)
+            if compensation_content and len(compensation_content) > 100:
+                compensation_guide = compensation_content
+                compensation_file = output_dir / f"{company_name}_Compensation_Negotiation_Guide.md"
+                compensation_file.write_text(f"# Compensation Negotiation Guide - {company_name}\n\n{compensation_content}")
+        
+        files_created = [resume_file, analysis_file, cl_file, checklist_file]
+        if compensation_file:
+            files_created.append(compensation_file)
+        
         if verbose:
             print(f"   ✓ {resume_file.name}")
             print(f"   ✓ {analysis_file.name}")
             print(f"   ✓ {cl_file.name}")
             print(f"   ✓ {checklist_file.name}")
+            if compensation_file:
+                print(f"   ✓ {compensation_file.name}")
         
         return CustomizationResult(
             company_name=company_name,
@@ -391,7 +416,8 @@ class ResumeCustomizer:
             analysis_md=response,
             cover_letter_points_md=cover_letter,
             application_checklist_md=checklist,
+            compensation_negotiation_guide_md=compensation_guide,
             output_directory=output_dir,
-            files_created=[resume_file, analysis_file, cl_file, checklist_file]
+            files_created=files_created
         )
 

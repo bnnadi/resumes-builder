@@ -221,6 +221,10 @@ class ResumeWorkflow:
         
         console = Console()
         
+        compensation_line = ""
+        if customization_result.compensation_negotiation_guide_md:
+            compensation_line = f"  💰 Compensation Guide: {customization_result.company_name}_Compensation_Negotiation_Guide.md\n"
+        
         summary = f"""
 [bold green]✅ Workflow Complete![/bold green]
 
@@ -233,8 +237,7 @@ class ResumeWorkflow:
   📝 Analysis: {customization_result.company_name}_Analysis.md
   💼 Cover Letter Points: {customization_result.company_name}_Cover_Letter_Points.md
   ✅ Checklist: {customization_result.company_name}_Application_Checklist.md
-
-[bold]Location:[/bold] {customization_result.output_directory}
+{compensation_line}[bold]Location:[/bold] {customization_result.output_directory}
 
 [bold cyan]Next Steps:[/bold cyan]
   1. Review the customized .docx resume
